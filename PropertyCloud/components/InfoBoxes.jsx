@@ -5,6 +5,7 @@ const InfoBoxes = () => {
     <section>
       <div className="container-xl lg:container m-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg">
+          {/*--- For Renters ---*/}
           <InfoBox
             heading="For Renters"
             backgroundColor="bg-gray-100"
@@ -18,6 +19,7 @@ const InfoBoxes = () => {
             owners.
           </InfoBox>
 
+          {/*--- For Property Owners ---*/}
           <InfoBox
             heading="For Property Owners"
             backgroundColor="bg-blue-100"
