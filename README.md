@@ -33,6 +33,7 @@
 > 🗝️ Which Concepts Have I Covered :
 - _install_: ` npx create-next-app@latest `
 - _install_: ` npm i react-icons `
+- _install_: ` npm i react-spinners `
 
 
 <br/>
