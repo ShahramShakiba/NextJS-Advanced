@@ -4,7 +4,7 @@ import PropertyCard from '@/components/PropertyCard';
 
 const HomeProperties = () => {
   const recentProperties = properties
-    .sort(() => Math.random() - Math.random)
+    .sort(() => Math.random() - Math.random())
     .slice(0, 3);
 
   return (
