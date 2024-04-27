@@ -26,8 +26,8 @@ const Navbar = () => {
     <nav className="bg-blue-700 border-b border-blue-500">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-20 items-center justify-between">
+          {/*---------- Mobile menu Button ----------*/}
           <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
-            {/*---------- Mobile menu Button ----------*/}
             <button
               type="button"
               id="mobile-dropdown-button"
@@ -56,8 +56,9 @@ const Navbar = () => {
             </button>
           </div>
 
+          {/*---------- Links/Menu - Center section ----------*/}
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-            {/*---------- Property Logo ----------*/}
+            {/*--- Property Logo ---*/}
             <Link className="flex flex-shrink-0 items-center" href="/">
               <Image className="h-10 w-auto" src={logo} alt="PropertyPulse" />
 
@@ -66,7 +67,7 @@ const Navbar = () => {
               </span>
             </Link>
 
-            {/*----- Desktop Menu - Hidden below "md" -----*/}
+            {/*-- Desktop Menu - Hidden below "md" --*/}
             <div className="hidden md:ml-6 md:block">
               <div className="flex space-x-2">
                 <Link
@@ -101,7 +102,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/*------- Right Side Menu (Logged Out) -------*/}
+          {/*------- Right Side Menu (Logged Out State) -------*/}
           {!isLoggedIn && (
             <div className="hidden md:block md:ml-6">
               <div className="flex items-center">
@@ -115,9 +116,10 @@ const Navbar = () => {
             </div>
           )}
 
-          {/*------- Right Side Menu (Logged In) -------*/}
+          {/*------- Right Side Menu (Logged In State) -------*/}
           {isLoggedIn && (
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+              {/*---- Notification ---*/}
               <Link href="/messages" className="relative group">
                 <button
                   type="button"
@@ -219,7 +221,7 @@ const Navbar = () => {
       {/*--------------- Mobile menu --------------*/}
       {isMobMenuOpen && (
         <div id="mobile-menu">
-          <div className="space-y-1 px-2 pb-3 pt-2">
+          <div className="space-y-1 px-2 pb-3 pt-2 md:hidden">
             <Link
               href="/"
               className={`${
