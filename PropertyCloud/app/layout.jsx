@@ -1,6 +1,6 @@
 import '@/assets/styles/globals.css';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/global/Navbar';
+import Footer from '@/components/global/Footer';
 
 export const metadata = {
   title: 'Property Cloud',
