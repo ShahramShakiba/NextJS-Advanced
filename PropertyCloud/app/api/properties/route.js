@@ -1,11 +1,16 @@
 import connectDB from '@/config/db';
+import PropertyModel from '@/models/Property';
 
+// GET /api/properties
 export const GET = async (request) => {
   try {
     await connectDB();
 
+    //get all of properties
+    const properties = await PropertyModel.find({});
+
     //send a response
-    return new Response(JSON.stringify({ message: 'Hello World.' }), {
+    return new Response(JSON.stringify(properties), {
       status: 200,
     });
   } catch (error) {
@@ -24,3 +29,10 @@ export const GET = async (request) => {
 - we can call "GET", "POST", "PUT", "DELETE" and it will automatically handle those types of Requests | you don't have to say if the method equals GET or ...
 */
 
+/* Fetch data
+- create an API Route to use mongoose to get the properties from the database
+
+- then, from properties-component we're going to fetch data from our API-Route
+
+- then display the properties
+*/
