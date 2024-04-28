@@ -34,6 +34,8 @@
 - _install_: ` npx create-next-app@latest `
 - _install_: ` npm i react-icons `
 - _install_: ` npm i react-spinners `
+- _install_: ` npm i mongodb mongoose `
+- 
 
 
 <br/>
