@@ -1,10 +1,10 @@
 import Hero from '@/components/Hero';
-import HomeProperties from '@/components/HomeProperties';
 import InfoBoxes from '@/components/InfoBoxes';
+import HomeProperties from '@/components/HomeProperties';
 
 const HomePage = () => {
   // console.log(process.env.MONGODB_URI);
-  
+
   return (
     <>
       <Hero />
