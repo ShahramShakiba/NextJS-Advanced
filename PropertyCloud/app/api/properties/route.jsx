@@ -1,5 +1,5 @@
-import connectDB from '@/config/db';
-import PropertyModel from '@/models/Property';
+import connectDB from '@/config/database';
+import Property from '@/models/Property';
 
 // GET /api/properties
 export const GET = async (request) => {
@@ -7,15 +7,17 @@ export const GET = async (request) => {
     await connectDB();
 
     //get all of properties
-    const properties = await PropertyModel.find({});
-
+    const properties = await Property.find({});
+    console.log(properties);
     //send a response
     return new Response(JSON.stringify(properties), {
       status: 200,
     });
   } catch (error) {
     console.log(error);
-    return new Response('Something Went Wrong!', { status: 500 });
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500,
+    });
   }
 };
 

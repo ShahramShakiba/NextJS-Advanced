@@ -22,7 +22,7 @@ const UserSchema = new Schema(
       //is gonna be array of property-IDs
       {
         type: Schema.Types.ObjectId,
-        ref: 'Property',
+        ref: "Property",
         //the collection that we're getting the IDs
       },
     ],
@@ -34,7 +34,7 @@ const UserSchema = new Schema(
 );
 
 // Create user using Mongoose's model function
-const User = models.User || model('User', UserSchema);
+const User = models.user || model('User', UserSchema);
 
 export default User;
 

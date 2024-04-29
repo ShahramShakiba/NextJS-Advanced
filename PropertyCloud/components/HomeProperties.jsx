@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import properties from '@/properties.json';
-import PropertyCard from '@/components/global/PropertyCard';
+import PropertyCard from '@/components/PropertyCard';
 
 const HomeProperties = () => {
   const recentProperties = properties
